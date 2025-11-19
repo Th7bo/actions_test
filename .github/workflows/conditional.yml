@@ -16,11 +16,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Prod Test"
-        if: ${{ github.event.inputs.environment == "production"}}
+        if: ${{ github.event.inputs.environment == 'production'}}
         run: echo Deploying to production!
 
       - name: "Not Prod Test"
-        if: ${{ !github.event.inputs.environment == "production"}}
+        if: ${{ !github.event.inputs.environment == 'production'}}
         run: echo Running in test mode
       - name: "Environment Logging"
         run: echo ${{ github.event.inputs.environment }}
